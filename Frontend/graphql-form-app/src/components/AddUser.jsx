@@ -27,7 +27,7 @@ const AddUserForm = () => {
       setEmailError("Invalid email format. Please enter a valid email.");
       return;
     }
-    setEmailError(""); // Clear error if valid
+    setEmailError(""); 
     addUser({ variables: { name, email } });
   };
 
