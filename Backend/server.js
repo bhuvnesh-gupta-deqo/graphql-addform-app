@@ -1,6 +1,4 @@
 const { ApolloServer, gql } = require("apollo-server");
-
-// Define the GraphQL schema
 const typeDefs = gql`
   type User {
     id: ID!
@@ -17,13 +15,11 @@ const typeDefs = gql`
   }
 `;
 
-// Mocked data as an in-memory database
 let users = [
   { id: "1", name: "John Doe", email: "john@example.com" },
   { id: "2", name: "Jane Smith", email: "jane@example.com" },
 ];
 
-// Define resolvers for queries and mutations
 const resolvers = {
   Query: {
     users: () => users,
@@ -37,7 +33,6 @@ const resolvers = {
   },
 };
 
-// Create and start the Apollo Server
 const server = new ApolloServer({ typeDefs, resolvers });
 
 server.listen(port = 5000).then(({ url }) => {
