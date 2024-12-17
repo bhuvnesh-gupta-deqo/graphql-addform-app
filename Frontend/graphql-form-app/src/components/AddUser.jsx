@@ -12,25 +12,21 @@ const AddUserForm = () => {
     onCompleted: () => {
       setName("");
       setEmail("");
-      setEmailError(""); // Clear validation errors
+      setEmailError(""); 
     },
   });
-
-  // Email Validation Function
+  
   const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Standard email regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
     return emailRegex.test(email);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Email validation before form submission
     if (!validateEmail(email)) {
       setEmailError("Invalid email format. Please enter a valid email.");
       return;
     }
-
     setEmailError(""); // Clear error if valid
     addUser({ variables: { name, email } });
   };
