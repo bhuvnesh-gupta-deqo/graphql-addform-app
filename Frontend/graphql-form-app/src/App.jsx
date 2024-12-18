@@ -4,7 +4,6 @@ import AddUser from "./components/AddUser";
 const App = () => {
   return (
     <div className="container" >
-      <h1>Reusable GraphQL Block</h1>
       <UserList />
       <AddUser />
     </div>

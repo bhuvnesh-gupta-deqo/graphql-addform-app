@@ -32,28 +32,45 @@ const AddUserForm = () => {
   };
 
   return (
-    <div>
+    <div className="d-flex mx-auto flex-column justify-content-center align-items-center mt-5">
       <h2>Add User</h2>
       <form onSubmit={handleSubmit}>
+        <div>
+        <label htmlFor="name" className="form-label ">
+          Name
         <input
+        className="form-control"
           type="text"
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
         />
+        </label>
+        </div>
+        
+        <div>
+        <label htmlFor="email" className="form-label ">
+        Email
         <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
+        className="form-control"
+        type="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
         />
         {emailError && <p style={{ color: "red" }}>{emailError}</p>}
-        <button type="submit" disabled={loading}>
+        </label>
+        </div>
+     
+     <div className="d-flex  mx-4 "> 
+      
+        <button className="btn btn-primary  "  type="submit" disabled={loading}>
           {loading ? "Adding..." : "Add User"}
         </button>
         {error && <p style={{ color: "red" }}>Error: {error.message}</p>}
+     </div>
       </form>
     </div>
   );

@@ -8,11 +8,12 @@ const UserList = () => {
   if (error) return <p>Error loading users: {error.message}</p>;
 
   return (
-    <div>
-      <h2>User List</h2>
-      <ul>
+    <div className="d-flex mx-auto flex-column justify-content-center align-items-center mt-3">
+      <h1 className="mt-3">Reusable GraphQL Block</h1>
+      <h2 className="mt-3">User List</h2>
+      <ul className="list-group mt-3">
         {data.users.map((user) => (
-          <li key={user.id}>
+          <li className="list-group-item" key={user.id}>
             {user.name} - ({user.email})
           </li>
         ))}
