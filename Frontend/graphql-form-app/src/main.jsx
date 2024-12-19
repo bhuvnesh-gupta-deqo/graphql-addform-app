@@ -5,7 +5,7 @@ import App from "./App";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 const client = new ApolloClient({
-  uri: "http://localhost:5000", 
+  uri: "http://localhost:4000", 
   cache: new InMemoryCache(),
 });
 
