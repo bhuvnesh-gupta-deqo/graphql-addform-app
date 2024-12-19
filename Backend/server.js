@@ -16,8 +16,8 @@ const typeDefs = gql`
 `;
 
 let users = [
-  { id: "1", name: "John Doe", email: "john@example.com" },
-  { id: "2", name: "Jane Smith", email: "jane@example.com" },
+  { id: "1", name: "Aman Chouksey", email: "aman@gmail.com" },
+  { id: "2", name: "Piyush Pamnani", email: "piyush@gmail.com" },
 ];
 
 const resolvers = {
