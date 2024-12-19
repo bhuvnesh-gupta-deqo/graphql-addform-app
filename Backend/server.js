@@ -35,6 +35,6 @@ const resolvers = {
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
-server.listen(port = 5000).then(({ url }) => {
+server.listen(port).then(({ url }) => {
   console.log(`Mock GraphQL server running at ${url}`);
 });
